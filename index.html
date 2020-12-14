@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Hammii</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            .ml4 {
+            position: relative;
+            font-weight: 900;
+            font-size: 6em;
+            }
+            .ml4 .letters {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0.3em;
+            right: 0;
+            opacity: 0; 
+            }
+            .mainbod{
+                text-align: center;
+                justify-content: center;
+                padding-top: 100px;
+            }
+            .ml4 .letters-1{
+                color: mediumorchid;
+            }
+            .ml4 .letters-2{
+                color: royalblue;
+            }
+            .ml4 .letters-3{
+                color: red;
+            }
+            .bodyback{
+                background-color: rgb(63, 244, 196);
+            }
+
+        </style>
+    </head>
+
+
+
+
+
+
+
+
+
+
+
+
+    <body class="bodyback">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Made This For You</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="booba.html">Booba</a></li>
+                <!-- <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li> -->
+              </ul>
+            </div>
+          </nav>
+
+        <div class="mainbod">
+            <h1 class="ml4">
+                <span class="letters letters-1">Hello There</span>
+                <span class="letters letters-2">Hammiii</span>
+                <span class="letters letters-3">and you too Aalia</span>
+            </h1>
+        </div>
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        
+
+
+
+
+
+
+
+
+          <script>
+            var ml4 = {};
+            ml4.opacityIn = [0,1];
+            ml4.scaleIn = [0.2, 1];
+            ml4.scaleOut = 3;
+            ml4.durationIn = 800;
+            ml4.durationOut = 600;
+            ml4.delay = 1000;
+
+            anime.timeline({loop: true})
+            .add({
+                targets: '.ml4 .letters-1',
+                opacity: ml4.opacityIn,
+                scale: ml4.scaleIn,
+                duration: ml4.durationIn
+            }).add({
+                targets: '.ml4 .letters-1',
+                opacity: 0,
+                scale: ml4.scaleOut,
+                duration: ml4.durationOut,
+                easing: "easeInExpo",
+                delay: ml4.delay
+            }).add({
+                targets: '.ml4 .letters-2',
+                opacity: ml4.opacityIn,
+                scale: ml4.scaleIn,
+                duration: ml4.durationIn
+            }).add({
+                targets: '.ml4 .letters-2',
+                opacity: 0,
+                scale: ml4.scaleOut,
+                duration: ml4.durationOut,
+                easing: "easeInExpo",
+                delay: ml4.delay
+            }).add({
+                targets: '.ml4 .letters-3',
+                opacity: ml4.opacityIn,
+                scale: ml4.scaleIn,
+                duration: ml4.durationIn
+            }).add({
+                targets: '.ml4 .letters-3',
+                opacity: 0,
+                scale: ml4.scaleOut,
+                duration: ml4.durationOut,
+                easing: "easeInExpo",
+                delay: ml4.delay
+            }).add({
+                targets: '.ml4',
+                opacity: 0,
+                duration: 500,
+                delay: 500
+            });
+          </script>
+    </body>
+</html>
